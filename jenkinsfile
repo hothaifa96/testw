@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                sh 'FLASK_APP=/home/hothaifa/Desktop/flask3/flask3.py flask run --host=0.0.0.0'
+            }
+        }
+        stage('test'){
+        steps {
+            sh 'echo testing . . . '
+        }
+        }
+    }
+}
